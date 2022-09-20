@@ -33,3 +33,11 @@ npm install sass less -D
 配置开发服务器选项
 
 [配置选项](https://cn.vitejs.dev/config/server-options.html#server-https)
+
+## demo-static
+
+静态文件引入
+
+- public文件夹内文件以绝对路径引入，打包时会直接复制
+
+- 非public文件按打包处理
