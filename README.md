@@ -1,5 +1,7 @@
 ## vite使用demo
 
+### [vite config](https://cn.vitejs.dev/config/)
+
 ## start
 
 - install
@@ -41,3 +43,11 @@ npm install sass less -D
 - public文件夹内文件以绝对路径引入，打包时会直接复制
 
 - 非public文件按打包处理
+
+## demo-env
+
+环境变量与模式
+
+为了防止意外地将一些环境变量泄漏到客户端，只有以 VITE_ 为前缀的变量才会暴露给经过 vite 处理的代码
+
+
