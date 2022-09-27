@@ -50,4 +50,20 @@ npm install sass less -D
 
 为了防止意外地将一些环境变量泄漏到客户端，只有以 VITE_ 为前缀的变量才会暴露给经过 vite 处理的代码
 
+## demo-react
+
+```
+npm install @vitejs/plugin-react -D
+```
+
+```js
+//vite.config.js
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  plugins: [react()],
+});
+```
+
 
