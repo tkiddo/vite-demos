@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useTransition } from "react";
 
 const Count = () => {
   console.log("Count run ");
   const [count, setCount] = useState(0);
+  const [pending, startTransition] = useTransition();
   return (
     <>
-      <div>{count}</div>
-      <button onClick={() => setCount(count + 1)}>+</button>
+      <div>{pending ? "changing" : count}</div>
+      <button onClick={() => startTransition(() => setCount(count + 1))}>
+        +
+      </button>
     </>
   );
 };
