@@ -66,4 +66,20 @@ export default defineConfig({
 });
 ```
 
+## demo-vue
+
+```
+npm install @vitejs/plugin-vue -D
+```
+
+```js
+//vite.config.js
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+
+export default defineConfig({
+  plugins: [vue()],
+});
+```
+
 
