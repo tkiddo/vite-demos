@@ -1,18 +1,12 @@
-import React, { useState } from "react";
-import Header from "./components/Header";
-import Count from "./components/Count";
+import React, { useState } from 'react'
 
 const App = () => {
-  console.log("App run ");
-  const [msg, setMsg] = useState("Hello");
+  console.log('App run ')
   return (
     <>
-      <div>{msg}</div>
-      <button onClick={() => setMsg("Hi" + Math.random())}>Change</button>
-      <Header />
-      <Count />
+      <div>1`2</div>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
