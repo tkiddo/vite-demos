@@ -28,6 +28,7 @@ const List = () => {
   })
 
   const handleTableChange = (pagination, filters, sorter) => {
+    setPage(pagination)
     setSearchParams(
       (params) => {
         params.set('current', pagination.current)
@@ -73,13 +74,6 @@ const List = () => {
     },
   ]
 
-  useEffect(() => {
-    setPage({
-      current,
-      pageSize,
-    })
-  }, [searchParams])
-
   return (
     <>
       <Table
@@ -89,18 +83,6 @@ const List = () => {
         pagination={{
           current: page.current,
           pageSize: page.pageSize,
-          // onChange: (current, pageSize) => {
-          //   setSearchParams(
-          //     (params) => {
-          //       params.set('current', current)
-          //       params.set('pageSize', pageSize)
-          //       return params
-          //     },
-          //     {
-          //       replace: true,
-          //     }
-          //   )
-          // },
         }}
       />
     </>
